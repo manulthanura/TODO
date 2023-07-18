@@ -1,51 +1,9 @@
 
 <footer class="footer py-5 pt-5 mt-5">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-10 mb-4 mx-auto text-center">
-                <a href="https://forgear.lk/privacy" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
-                    Privacy & Policy
-                </a>
-                <a href="https://forgear.lk/terms" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
-                    Terms & Conditions
-                </a>
-                <a href="https://forgear.lk/service" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
-                Products
-                </a>
-                <a href="https://forgear.edu.lk/" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
-                    Blog
-                </a>
-                <a href="https://forgear.lk/service#web-development" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
-                    Pricing
-                </a>
-                <a href="https://forgear.lk/signin" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
-                    Sign In
-                </a>
-            </div>
-            <div class="col-lg-8 mx-auto text-center mb-4 mt-2">
-                <a href="https://www.facebook.com/forgearco" class="text-secondary me-xl-4 me-4">
-                    <span class="text-lg fab fa-facebook" aria-hidden="true"></span>
-                </a>
-                <a href="https://www.instagram.com/forgearco/" class="text-secondary me-xl-4 me-4">
-                    <span class="text-lg fab fa-instagram" aria-hidden="true"></span>
-                </a>
-                <a href="https://wa.me/94769139594" class="text-secondary me-xl-4 me-4">
-                    <span class="text-lg fab fa-whatsapp" aria-hidden="true"></span>
-                </a>
-                <a href="https://www.linkedin.com/company/forgear/" class="text-secondary me-xl-4 me-4">
-                    <span class="text-lg fab fa-linkedin" aria-hidden="true"></span>
-                </a>
-                <a href="https://twitter.com/ForgearC" class="text-secondary me-xl-4 me-4">
-                    <span class="text-lg fab fa-twitter" aria-hidden="true"></span>
-                </a>
-                <a href="https://github.com/FORGEAR" class="text-secondary me-xl-4 me-4">
-                    <span class="text-lg fab fa-github" aria-hidden="true"></span>
-                </a>
-            </div>
-        </div>
             <div class="col-12">
                 <div class="text-center">
-                    <p class="my-4 text-sm">
+                    <p class="text-sm">
                     All rights reserved. Copyright © <script>
                     document.write(new Date().getFullYear())
                     </script> <br>FORGEAR
