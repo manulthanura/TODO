@@ -1,0 +1,17 @@
+RewriteEngine On
+
+RewriteRule ^home$ index.php [NC,L]
+RewriteRule ^about$ about.php [NC,L]
+RewriteRule ^service$ service.php [NC,L]
+RewriteRule ^projects$ projects.php [NC,L]
+RewriteRule ^contact$ contact.php [NC,L]
+RewriteRule ^privacy$ privacy.php [NC,L]
+RewriteRule ^terms$ terms.php [NC,L]
+RewriteRule ^signin$ signin.php  [NC,L]
+RewriteRule ^dashboard$ dashboard.php [NC,L]
+RewriteRule ^add-project$ add-project.php [NC,L]
+RewriteRule ^error-404$ error-404.php [NC,L]
+RewriteRule ^error-500$ error-500.php [NC,L]
+RewriteRule ^success$ success.php [NC,L]
+RewriteRule ^newsletter-action$ action/newsletter-action.php [NC,L]
+RewriteRule ^msg-action$ action/msg-action.php [NC,L]
