@@ -59,6 +59,12 @@
                 </div>
               </form>
             </div>
+            <div class="text-center">
+              <p class="mb-0 text-sm">
+                Already have an account?
+                <a href="./index" class="text-info text-gradient font-weight-bold">Sign in</a>
+              </p>
+            </div>
           </div>
         </div>
       </div>
