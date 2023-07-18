@@ -62,7 +62,7 @@
             <div class="text-center">
               <p class="mb-0 text-sm">
                 Already have an account?
-                <a href="./home" class="text-info text-gradient font-weight-bold">Sign in</a>
+                <a href="./home" class="text-primary text-gradient font-weight-bold">Sign in</a>
               </p>
             </div>
           </div>
