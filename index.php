@@ -2,11 +2,11 @@
 <!DOCTYPE html>
 <html lang="en" itemscope itemtype="http://schema.org/WebPage">
 <!-- Head -->
-<?php include "./header.php";?>
+<? // php include "./header.php";?>
 <!-- End Head -->
 <body class="presentation-page">
   <!-- Navbar -->
-  <?php include "./navbar.php";?>
+  <? //php include "./navbar.php";?>
   <!-- Hero section -->
   <header class="header-2">
     <div class="page-header min-vh-75 relative" style="background-image: url('./assets/img/curved-images/curved.jpg')">
