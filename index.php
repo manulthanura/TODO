@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en" itemscope itemtype="http://schema.org/WebPage">
 <!-- Head -->
-<?  php include "./header.php";?>
+<?php include "./header.php";?>
 <!-- End Head -->
 <body class="presentation-page">
   <!-- Navbar -->
