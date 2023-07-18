@@ -6,7 +6,7 @@
                     <p class="text-sm">
                     All rights reserved. Copyright © <script>
                     document.write(new Date().getFullYear())
-                    </script> <br>FORGEAR
+                    </script> <br>Manul & Janith
                     </p>
                 </div>
             </div>
