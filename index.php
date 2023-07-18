@@ -68,7 +68,7 @@ if (isset($_POST['submit'])) {
                 <div class="card-footer text-center mt-2 pt-0 px-lg-2 px-1">
                   <p class="text-sm mx-auto">
                     Don't have an account?
-                    <a href="./register" class="text-info text-gradient font-weight-bold">Sign up</a>
+                    <a href="./signup" class="text-info text-gradient font-weight-bold">Sign up</a>
                   </p>
                 </div>
                 <div class="card-footer text-center pt-0 px-lg-2 px-1">
