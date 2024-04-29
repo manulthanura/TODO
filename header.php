@@ -15,7 +15,6 @@
   <link href="https://forgear.lk/assets/css/nucleo-svg.css" rel="stylesheet" />
   <!-- Font Awesome Icons -->
   <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
-  <link href="https://forgear.lk/assets/css/nucleo-svg.css" rel="stylesheet" />
   <!-- CSS Files -->
   <link id="pagestyle" href="https://forgear.lk/assets/css/main.css?v=1.0.9" rel="stylesheet" />
 </head>
