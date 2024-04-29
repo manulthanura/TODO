@@ -21,13 +21,13 @@
                   Don't let your tasks get the best of you!
                 </p>
               </div>
-              <form action="msg-action" id="contact-form" method="post" autocomplete="off">
+              <form action="log" id="contact-form" method="post" autocomplete="off">
                 <div class="card-body pb-2">
                   <div class="row">
                     <div class="col-md-6">
                       <label>Full Name</label>
                       <div class="input-group mb-3">
-                        <input class="form-control" placeholder="Full Name" aria-label="Full Name" type="text" name="cname" required>
+                        <input class="form-control" placeholder="Full Name" aria-label="Full Name" type="text" name="name" required>
                       </div>
                     </div>
                     <div class="col-md-6 ps-md-3">
