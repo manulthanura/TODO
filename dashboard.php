@@ -11,28 +11,32 @@ if (!isset($_SESSION['username'])) {
 }
 
 // Function to get user ID from username (implement your logic)
-function getUserID($conn, $username) {
-    $sql = "SELECT u_id FROM users WHERE email = ?";
+function getUser($conn, $username) {
+    $sql = "SELECT * FROM users WHERE email = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("s", $username);
     $stmt->execute();
     $result = $stmt->get_result();
     if ($result->num_rows == 1) {
       $row = $result->fetch_assoc();
-      return $row['u_id'];
+      return $row;
     } else {
       return null; // Handle case if user not found
     }
 }
+
+// Get user data (including name)
+$user = getUser($conn, $_SESSION['username']);
+
+// Get user ID
+$user_id = $user['u_id'];
+$user_name = $user['name'];
   
-  // Get user ID
-  $user_id = getUserID($conn, $_SESSION['username']);
-  
-  // If user ID not found, redirect to login (optional)
-  if (!$user_id) {
-    header("Location: login.php");
-    exit();
-  }
+// If user ID not found, redirect to login (optional)
+if (!$user_id) {
+  header("Location: login.php");
+  exit();
+}
 
 // Function to get tasks for a user
 function getTasks($conn, $user_id) {
@@ -66,7 +70,7 @@ function getAvailableTasks($tasks) {
       }
     }
     return $available;
-  }
+}
 
 // Get available tasks
 $available_tasks = getAvailableTasks($tasks);
@@ -103,17 +107,8 @@ $available_tasks = getAvailableTasks($tasks);
                 <span class="d-sm-inline d-none">Sign Out</span>
               </a>
             </li>
-            <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
-              <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav">
-                <div class="sidenav-toggler-inner">
-                  <i class="sidenav-toggler-line"></i>
-                  <i class="sidenav-toggler-line"></i>
-                  <i class="sidenav-toggler-line"></i>
-                </div>
-              </a>
-            </li>
             <li class="nav-item px-3 d-flex align-items-center">
-              <a href="javascript:;" class="nav-link text-body p-0">
+              <a href="profile" class="nav-link text-body p-0">
                 <i class="fa fa-cog fixed-plugin-button-nav cursor-pointer"></i>
               </a>
             </li>
@@ -211,7 +206,7 @@ $available_tasks = getAvailableTasks($tasks);
                 </div>
                 <div class="col-4 text-end">
                   <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
-                    <i class="ni ni-money-coins text-lg opacity-10" aria-hidden="true"></i>
+                    <i class="fa fa-tasks" aria-hidden="true"></i>
                   </div>
                 </div>
               </div>
@@ -224,7 +219,7 @@ $available_tasks = getAvailableTasks($tasks);
               <div class="row">
                 <div class="col-8">
                   <div class="numbers">
-                    <p class="text-sm mb-0 text-capitalize font-weight-bold">Today's Users</p>
+                    <p class="text-sm mb-0 text-capitalize font-weight-bold">Details</p>
                     <h5 class="font-weight-bolder mb-0">
                       2,300
                       <span class="text-success text-sm font-weight-bolder">+3%</span>
@@ -233,7 +228,7 @@ $available_tasks = getAvailableTasks($tasks);
                 </div>
                 <div class="col-4 text-end">
                   <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
-                    <i class="ni ni-world text-lg opacity-10" aria-hidden="true"></i>
+                    <i class="fa fa-id-card-o" aria-hidden="true"></i>
                   </div>
                 </div>
               </div>
@@ -246,7 +241,7 @@ $available_tasks = getAvailableTasks($tasks);
               <div class="row">
                 <div class="col-8">
                   <div class="numbers">
-                    <p class="text-sm mb-0 text-capitalize font-weight-bold">New Clients</p>
+                    <p class="text-sm mb-0 text-capitalize font-weight-bold">Add Task</p>
                     <h5 class="font-weight-bolder mb-0">
                       +3,462
                       <span class="text-danger text-sm font-weight-bolder">-2%</span>
@@ -255,7 +250,7 @@ $available_tasks = getAvailableTasks($tasks);
                 </div>
                 <div class="col-4 text-end">
                   <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
-                    <i class="ni ni-paper-diploma text-lg opacity-10" aria-hidden="true"></i>
+                    <i class="fa fa-plus-square-o" aria-hidden="true"></i>
                   </div>
                 </div>
               </div>
@@ -268,16 +263,15 @@ $available_tasks = getAvailableTasks($tasks);
               <div class="row">
                 <div class="col-8">
                   <div class="numbers">
-                    <p class="text-sm mb-0 text-capitalize font-weight-bold">Sales</p>
+                    <p class="text-sm mb-0 text-capitalize font-weight-bold">Profile</p>
                     <h5 class="font-weight-bolder mb-0">
-                      $103,430
-                      <span class="text-success text-sm font-weight-bolder">+5%</span>
+                      <?php echo $user_name; ?>
                     </h5>
                   </div>
                 </div>
                 <div class="col-4 text-end">
                   <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
-                    <i class="ni ni-cart text-lg opacity-10" aria-hidden="true"></i>
+                    <i class="fa fa-user" aria-hidden="true"></i>
                   </div>
                 </div>
               </div>
@@ -292,10 +286,10 @@ $available_tasks = getAvailableTasks($tasks);
               <div class="row">
                 <div class="col-lg-6 col-7">
                   <h6>Tasks</h6>
-                  <p class="text-sm mb-0">
+                  <!-- <p class="text-sm mb-0">
                     <i class="fa fa-check text-info" aria-hidden="true"></i>
                     <span class="font-weight-bold ms-1">30 done</span> this month
-                  </p>
+                  </p> -->
                 </div>
                 <!-- <div class="col-lg-6 col-5 my-auto text-end">
                   <div class="dropdown float-lg-end pe-4">
