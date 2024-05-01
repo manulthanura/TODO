@@ -1,28 +1,11 @@
 <?php 
 
-include './action/config.php';
+require_once './action/config.php';
 
 session_start();
 
 if (isset($_SESSION['username'])) {
     header("Location: ./dashboard");
-}
-
-if (isset($_POST['submit'])) {
-    $email = htmlentities($_POST['email']);
-    $password = htmlentities(md5($_POST['password']));
-
-    $sql = "SELECT * FROM users WHERE email='{$email}' AND password='{$password}'";
-    $result = mysqli_query($conn, $sql);
-    if ($result->num_rows > 0) {
-      $row = mysqli_fetch_assoc($result);
-      $_SESSION['username'] = $row['username'];
-      header("Location: ./dashboard");
-		
-	} 
-    else {
-      echo "<script>alert('Woops! Username or Password is Wrong.')</script>";
-    }
 }
 
 ?>
@@ -47,7 +30,7 @@ if (isset($_POST['submit'])) {
                   <p class="mb-0">Enter your email and password to sign in</p>
                 </div>
                 <div class="card-body">
-                  <form role="form" method="POST">
+                  <form role="form" action="log" method="POST">
                     <label>Email</label>
                     <div class="mb-3">
                       <input type="email" name="email" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="email-addon">
