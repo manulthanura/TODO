@@ -21,7 +21,7 @@
                   Don't let your tasks get the best of you!
                 </p>
               </div>
-              <form action="log" id="contact-form" method="post" autocomplete="off">
+              <form action="reg" id="contact-form" method="POST" autocomplete="off">
                 <div class="card-body pb-2">
                   <div class="row">
                     <div class="col-md-6">
