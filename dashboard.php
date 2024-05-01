@@ -29,12 +29,12 @@ function getUser($conn, $username) {
 $user = getUser($conn, $_SESSION['username']);
 
 // Get user ID
-$user_id = $user['u_id'];
+$user_id = $user['id'];
 $user_name = $user['name'];
   
 // If user ID not found, redirect to login (optional)
 if (!$user_id) {
-  header("Location: login.php");
+  header("Location: ./home");
   exit();
 }
 
@@ -102,7 +102,7 @@ $available_tasks = getAvailableTasks($tasks);
           </div>
           <ul class="navbar-nav  justify-content-end">
             <li class="nav-item d-flex align-items-center">
-              <a href="javascript:;" class="nav-link text-body font-weight-bold px-0">
+              <a href="./action/logout.php" class="nav-link text-body font-weight-bold px-0">
                 <i class="fa fa-user me-sm-1"></i>
                 <span class="d-sm-inline d-none">Sign Out</span>
               </a>
