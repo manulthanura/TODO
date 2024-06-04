@@ -25,7 +25,7 @@
         if (password_verify($password, $user['password'])) {
           // Password is correct, start a new session
           $_SESSION['username'] = $user['email']; // Set username in session
-          header("Location: ./home"); // Redirect to home page
+          header("Location: dashboard"); // Redirect to home page
           exit();
         } else {
           $error = "Invalid password.";
