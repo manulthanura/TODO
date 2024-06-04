@@ -241,11 +241,7 @@ $available_tasks = getAvailableTasks($tasks);
               <div class="row">
                 <div class="col-8">
                   <div class="numbers">
-                    <p class="text-sm mb-0 text-capitalize font-weight-bold">Add Task</p>
-                    <h5 class="font-weight-bolder mb-0">
-                      +3,462
-                      <span class="text-danger text-sm font-weight-bolder">-2%</span>
-                    </h5>
+                    <h5 class="font-weight-bolder mt-2">Add Task</h5>
                   </div>
                 </div>
                 <div class="col-4 text-end">
